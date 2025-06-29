@@ -1,0 +1,155 @@
+.outline {
+  display: flex;
+  align-items: flex-start;
+  width: auto;
+  margin-left: 64px;
+  padding: 0;
+  position: sticky;
+  top: 130px;
+}
+
+.outline-list {
+  position: relative;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.outline-list::before,
+.outline-list::after {
+  display: none !important;
+}
+
+.outline-item {
+  position: relative;
+  font-size: 15px;
+  color: #444;
+  padding: 8px 12px 8px 32px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-bottom: 4px;
+  font-weight: 400;
+  z-index: 1;
+  background: transparent;
+}
+
+.outline-item.active {
+  color: #111 !important;
+  font-weight: 700 !important;
+  font-weight: bold !important;
+  background-color: #f0f0f0 !important;
+}
+
+.outline-item.active::before {
+  display: none;
+}
+
+.outline-item:hover {
+  background: #fbe9e7;
+  color: #111;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.outline-item.active:hover {
+  background: #e0e0e0 !important;
+  color: #000 !important;
+  font-weight: bold !important;
+}
+
+.outline-item.active:hover::before,
+.outline-item.active::before {
+  background: #c53030;
+}
+
+/* --- Sidebar Styles --- */
+.sidebar {
+  width: 30px;
+  height: 100vh;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.outline-slider {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 12px;
+  min-width: 18px;
+  height: auto;
+  position: relative;
+}
+
+.sidebar-handle {
+  width: 14px;
+  height: 48px;
+  background-color: #ccc;
+  border-radius: 8px;
+  position: relative;
+  cursor: grab;
+  transition: all 0.2s ease;
+}
+
+.sidebar-handle.active,
+.sidebar-handle:active,
+.sidebar-handle:hover {
+  background-color: #111;
+}
+
+.sidebar-stem {
+  width: 2px;
+  background-color: #ccc;
+  margin-top: 0;
+  border-radius: 2px;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 24px 16px 24px;
+  margin-bottom: 24px;
+  border-bottom: 1px solid #ddd;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  transition: max-width 0.2s;
+}
+
+.header-content.centered {
+  justify-content: center;
+  max-width: 100%;
+}
+
+.header-content.aligned {
+  justify-content: flex-start;
+  max-width: 700px; 
+}
+
+.app {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.main-content {
+  flex-grow: 1;
+  padding: 0 24px 0 24px;
+  box-sizing: border-box;
+} 
