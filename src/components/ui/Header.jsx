@@ -1,5 +1,7 @@
 import { useState, useRef, useEffect } from 'react';
 
+import searchIcon from '../../assets/SearchOutlined.svg'; // ✅ Correct import
+
 const Header = ({ onAddClick, onSearchChange }) => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const dropdownRef = useRef(null);
@@ -47,11 +49,7 @@ const Header = ({ onAddClick, onSearchChange }) => {
       <h1 className="header-title">Course builder</h1>
       <div className="header-right">
         <div className="search-container">
-          <img
-            src="src/assets/SearchOutlined.svg"
-            alt="Search"
-            className="search-icon"
-          />
+          <img src={searchIcon} alt="Search" className="search-icon" />
           <input
             type="text"
             placeholder="Search modules or items..."
