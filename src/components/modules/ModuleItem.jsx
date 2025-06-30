@@ -1,6 +1,8 @@
 import { useRef, useState } from 'react';
 import { useDrag, useDrop } from 'react-dnd';
 
+import pdfIcon from '../../assets/PDFColored.svg';
+
 const ModuleItem = ({
   item,
   index,
@@ -82,7 +84,7 @@ const ModuleItem = ({
               '🔗'
             ) : item.fileType === 'application/pdf' ? (
               <img
-                src="src/assets/PDFColored.svg"
+                src={pdfIcon}
                 alt="PDF"
                 style={{ width: '20px', height: '20px' }}
               />
