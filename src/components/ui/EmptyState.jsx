@@ -1,9 +1,13 @@
+import React from 'react';
+
+import resourcesIllustration from '../../assets/Resources.svg'; // ✅ Adjust path if needed
+
 const EmptyState = () => {
   return (
     <div className="empty-state">
       <div className="empty-state-illustration">
         <img
-          src="src\assets\Resources.svg"
+          src={resourcesIllustration}
           alt="Empty illustration"
           className="empty-state-image"
         />
